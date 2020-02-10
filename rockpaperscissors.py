@@ -5,6 +5,8 @@ from random import randint
 intro = "hi! welcome to this REALLY simple game of Rock, Paper, Scissors. To stop playing, enter 'k'."
 print(intro)
 
+choices = ["r", "p", "s"]
+
 while True:
 
     player = input("rock (r), paper (p), scissors (s)? ")
@@ -17,14 +19,7 @@ while True:
         break
     
     else:
-        chosen = randint(1, 3)
-        
-        if chosen == 1:
-            comp = "r"
-        elif chosen == 2:
-            comp = "p"
-        else:
-            comp = "s"
+        comp = choice[randint(0, 2)]
         print(player, "vs", comp)
 
         if (player == "r" and comp == "r") or (player == "p" and comp == "p") or (player == "s" and comp == "s"):
